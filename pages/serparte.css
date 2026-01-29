@@ -13,15 +13,30 @@
 .headeroverlay{color: rgb(255, 255, 255);
     align-items: center; 
     justify-content:space-between;
-    background:linear-gradient(rgb(29, 68, 29), rgb(61, 136, 61));
+    background:linear-gradient(135deg, rgb(23, 60, 23) 0%, rgb(45, 110, 45) 55%, rgb(72, 148, 72) 100%);
     display: flex;
     background-position: center;
     width: 100%;
-    min-height: 110px;
-    padding: 18px 32px;
-    border: 0.5px solid black;
+    min-height: 140px;
+    padding: 22px 32px;
+    border: 0.5px solid #0f2b0f;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
+.headeroverlay::after{
+    content: "";
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+    transform: skewY(-3deg);
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.16));
+    pointer-events: none;
+}
+.links a{font-family: 'Montserrat', sans-serif;}
 .links{
     display: flex;
     align-items: center;
@@ -48,7 +63,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 450px;
+    height: 280px;
 }
 .presentacion p{
     text-align: center;
@@ -56,7 +71,7 @@
     font-size: 20px;
     max-width: 600px;
 }
-.presentacion title{
+.presentacion .title{
     text-align: center;
     margin: 3px;
     font-size: 24px;
@@ -82,9 +97,9 @@
     display: flex;
     align-items: center; 
     justify-content: center;
-    gap: 50px;
-    margin: 60px 20px;
-    padding: 50px;
+    gap: 24px;
+    margin: 18px 12px 14px;
+    padding: 22px 18px;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.05);
 }

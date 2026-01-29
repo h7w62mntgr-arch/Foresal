@@ -14,6 +14,7 @@ body{background-color: #f4f6f8;
   color: white;
   padding: 60px 40px;
   border: black 0.5px solid;
+  overflow: hidden;
 }
 
 .HeaderOverlay{
@@ -72,7 +73,7 @@ body{background-color: #f4f6f8;
 
 .HeaderTexto{
 color: white;
-background-color: rgba(8, 190, 8, 0.274);
+background-color: rgba(12, 167, 12, 0.32);
 padding: 18px 20px;
 border-radius: 8px;
  position: static;
@@ -172,7 +173,7 @@ border-radius: 8px;
 
 .Footer {
   color: #333;
-  background: #e6eaef;
+  background: #e0e8df;
   padding: 15px;
   text-align: center;
   margin-top: 30px;
