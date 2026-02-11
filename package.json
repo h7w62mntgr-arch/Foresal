@@ -1,0 +1,33 @@
+{
+  "name": "foresal",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/h7w62mntgr-arch/Foresal#readme",
+  "bugs": {
+    "url": "https://github.com/h7w62mntgr-arch/Foresal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h7w62mntgr-arch/Foresal.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "detect-libc": "^2.1.2",
+    "immutable": "^5.1.4",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^4.0.3",
+    "readdirp": "^4.1.2",
+    "sass": "^1.97.3",
+    "source-map-js": "^1.2.1"
+  },
+  "devDependencies": {}
+}
