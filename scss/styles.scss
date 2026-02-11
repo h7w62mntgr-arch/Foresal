@@ -284,6 +284,16 @@ img {
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 1px;
+    margin: 0;
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+      
+      &:hover {
+        opacity: 0.85;
+      }
+    }
   }
   
   &__icon {
@@ -313,7 +323,7 @@ img {
     position: relative;
     transition: background $transicion-rapida;
     
-    // Subrayado animado
+    
     &::after {
       content: '';
       position: absolute;
