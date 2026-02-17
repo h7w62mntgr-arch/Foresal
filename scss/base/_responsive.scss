@@ -1,0 +1,91 @@
+// ============================================
+// RESPONSIVE
+// Acá ajusto todo para que se vea bien en celulares y tablets
+// Van al final para que sobreescriban los estilos anteriores
+// ============================================
+@use '../abstracts/variables' as *;
+
+// Para tablets (992px o menos)
+@media (max-width: $breakpoint-tablet) {
+  .site-header__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  .media-item {
+    height: 160px;
+  }
+  
+  .info {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 16px;
+    
+    .image-box,
+    .text-box {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Mobile
+@media (max-width: $breakpoint-mobile) {
+  .site-nav ul {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .brand__title {
+    font-size: 24px;
+  }
+  
+  .hero__title {
+    font-size: 26px;
+  }
+  
+  .presentacion {
+    padding: 20px 12px;
+    min-height: 260px;
+    
+    .title {
+      font-size: 26px;
+    }
+    
+    p {
+      font-size: 16px;
+    }
+  }
+  
+  .feature-section {
+    padding: 16px;
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-card {
+    padding: 16px;
+  }
+  
+  .media-item {
+    height: 150px;
+  }
+  
+  .info .text-box {
+    padding: 18px 16px;
+    
+    h3 {
+      font-size: 22px;
+    }
+  }
+  
+  .contact-form-block {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+}

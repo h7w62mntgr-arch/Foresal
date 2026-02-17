@@ -1,0 +1,30 @@
+// ============================================
+// RESET
+// Quito los estilos por defecto del navegador
+// Así empiezo desde cero y todo se ve igual en todos los browsers
+// ============================================
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  
+  &:hover {
+    color: inherit;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

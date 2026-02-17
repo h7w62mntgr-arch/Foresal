@@ -1,0 +1,56 @@
+// ============================================
+// FEATURES
+// Las tarjetitas con iconos de la página principal
+// ============================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/placeholders';
+
+// Contenedor de las feature cards (usa CSS Grid)
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: $shadow-soft;
+  margin-top: 20px;
+}
+
+.feature-card {
+  @extend %card-base;
+  background: rgba($color-acento, 0.12);
+  padding: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 0.5s ease-out backwards;
+  
+  
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+  
+  p {
+    margin: 0;
+    color: $ink;
+    font-weight: 600;
+  }
+  
+  .btn-primary {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+}
+
+.feature-icon {
+  font-size: 30px;
+  color: #1b5e20;
+  animation: pulse 2s infinite;
+}

@@ -1,0 +1,47 @@
+
+// ============================================
+// FORESAL - Hoja de estilos principal
+// Organizado con el patrón 7-1
+// ============================================
+
+// 1. ABSTRACTS - Acá van las variables, mixins y placeholders
+// (No generan CSS, solo los uso en otros archivos)
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/placeholders';
+
+// 2. VENDORS - CSS de librerías externas (Bootstrap, etc.)
+@use 'vendors/index' as vendors;
+
+// 3. BASE - Lo básico: reset, fuentes, animaciones y clases útiles
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/animations';
+@use 'base/utilities';
+
+// 4. LAYOUT - La estructura del sitio: header, nav, footer, etc.
+@use 'layout/header';
+@use 'layout/navigation';
+@use 'layout/hero';
+@use 'layout/footer';
+@use 'layout/grid';
+
+// 5. COMPONENTS - Componentes que reutilizo: botones, tarjetas, formularios
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/features';
+@use 'components/forms';
+@use 'components/media';
+
+// 6. PAGES - Estilos específicos de cada página
+@use 'pages/home';
+@use 'pages/servicios';
+@use 'pages/serparte';
+@use 'pages/contacto';
+@use 'pages/sobrenosotros';
+
+// 7. THEMES - Por si quiero agregar tema oscuro o algo así
+@use 'themes/index' as themes;
+
+// 8. RESPONSIVE - Media queries al final para que sobreescriban todo
+@use 'base/responsive';

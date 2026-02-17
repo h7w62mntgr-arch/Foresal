@@ -1,0 +1,122 @@
+// ============================================
+// SOBRE NOSOTROS
+// Estilos específicos para la página "Sobre Nosotros"
+// Muestra información del equipo y la empresa
+// ============================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.page-sobrenosotros {
+  .site-header {
+    // Foto del equipo con overlay verde semi-transparente
+    background: linear-gradient(150deg, rgba(18, 73, 39, 0.52), rgba(12, 66, 33, 0.32)), 
+                url('../assets/Equipo.png') center/cover no-repeat;
+  }
+}
+
+// Pequeño tag/etiqueta que va arriba del título
+.about-eyebrow {
+  display: inline-block;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #1f3a22;
+  background: #e7f1e4;
+  border: 1px solid #c9d8c6;
+  border-radius: 999px;
+}
+
+.about-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(66, 109, 70, 0), rgba(66, 109, 70, 0.45), rgba(66, 109, 70, 0));
+  border: 0;
+  margin: 16px 0 18px;
+}
+
+.about-icons {
+  color: #234423;
+  font-size: 15px;
+}
+
+.about-icon {
+  @include flex-center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e9f4e6 0%, #dbe8d7 100%);
+  border: 1px solid #c3d3c1;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  
+  &-svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: #1f3a22;
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.about-card {
+  background: #f7fbf6;
+  border: 1px solid #d2dfcf;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.about-team {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-card {
+  background: $card;
+  border: 1px solid #d7e4d2;
+  border-radius: 14px;
+  padding: 14px 12px;
+  @include card-shadow;
+}
+
+.team-avatar {
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  border: 2px solid #c9d8c6;
+  background: radial-gradient(circle at 30% 30%, $card, #e6f0e2);
+  color: #234423;
+  font-weight: 800;
+  font-size: 22px;
+  @include flex-center;
+}
+
+.team-role {
+  font-size: 14px;
+  color: #556557;
+  margin: 0;
+}
+
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #2f6c3b 0%, #285a34 100%);
+  color: $card;
+  border-radius: 12px;
+  border: 1px solid #1d4526;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  
+  &:hover {
+    background: linear-gradient(135deg, #2a6236 0%, #234f2e 100%);
+  }
+}

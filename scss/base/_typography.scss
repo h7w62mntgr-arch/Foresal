@@ -1,0 +1,16 @@
+// ============================================
+// TIPOGRAFÍA
+// Las fuentes que uso en todo el sitio
+// ============================================
+@use '../abstracts/variables' as *;
+
+// Cargo las fuentes de Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+// Estilos base del body
+body {
+  background: $sand;
+  color: $ink;
+  font-family: $font-primary;
+  line-height: 1.6;
+}

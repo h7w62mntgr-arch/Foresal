@@ -1,0 +1,22 @@
+// ============================================
+// ANIMACIONES
+// Efectos que uso para darle vida al sitio
+// ============================================
+
+// Aparece de abajo hacia arriba con fade
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Efecto pulso (para los iconos)
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}

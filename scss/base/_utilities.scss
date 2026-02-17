@@ -1,0 +1,27 @@
+// ============================================
+// CLASES UTILITARIAS
+// Clases que genero automáticamente con @each
+// Por ejemplo: .text-primario, .mt-sm, .mb-lg, etc.
+// ============================================
+@use '../abstracts/variables' as *;
+
+// Genero clases de colores: .text-primario, .bg-secundario, etc.
+@each $nombre, $color in $colores {
+  .text-#{$nombre} {
+    color: $color;
+  }
+  
+  .bg-#{$nombre} {
+    background-color: $color;
+  }
+}
+
+// Genero clases de espaciado: .mt-sm, .mb-md, .py-lg, etc.
+@each $nombre, $valor in $espaciados {
+  .mt-#{$nombre} { margin-top: $valor; }
+  .mb-#{$nombre} { margin-bottom: $valor; }
+  .py-#{$nombre} { 
+    padding-top: $valor; 
+    padding-bottom: $valor; 
+  }
+}

@@ -1,0 +1,121 @@
+// ============================================
+// CONTACTO
+// Estilos específicos para la página de contacto
+// Tiene formulario y mapa de ubicación
+// ============================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.page-contacto {
+  .site-header {
+    // Header con degradado verde (sin imagen de fondo)
+    background: linear-gradient(120deg, #1f4f1f, #4f9c4f);
+  }
+}
+
+// Hero pequeño para el título de la página
+.contact-hero {
+  padding: 26px 0 18px;
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f5fff5;
+  margin: 0;
+}
+
+.contact-subtitle {
+  font-size: 14px;
+  color: rgba(245, 255, 245, 0.78);
+  margin: 0;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  
+  a {
+    font-size: 13px;
+    color: #e2f5e2;
+    text-decoration: underline;
+  }
+}
+
+.contact-main {
+  padding: 28px 16px 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px 22px;
+}
+
+.contact-card {
+  background: #f9fcf7;
+  border: 1px solid #c8d9c8;
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  @include hover-lift;
+  
+  i {
+    font-size: 20px;
+    color: $green-600;
+  }
+}
+
+.contact-label {
+  font-weight: 700;
+  font-size: 16px;
+  color: #234423;
+}
+
+.contact-value {
+  font-size: 14px;
+  color: #2b3d2b;
+  margin-top: 2px;
+}
+
+.contact-placeholder {
+  background: #e8f2e4;
+  border: 1px solid #c8d9c8;
+  border-radius: 6px;
+  min-height: 170px;
+  @include flex-center;
+  color: #6b7f6b;
+  font-size: 28px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form-block {
+  margin-top: 26px;
+  padding: 18px 16px;
+  background: #f1f7ef;
+  border: 1px solid #c8d9c8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px 24px;
+  
+  h2 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    color: #234423;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: #2f3d2f;
+  }
+}

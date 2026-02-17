@@ -1,0 +1,15 @@
+// ============================================
+// HOME
+// Estilos específicos para la página principal
+// ============================================
+
+.page-home {
+  // Imagen de fondo que se queda fija mientras scrolleas (parallax simple)
+  background: url('../assets/intentobackground.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  
+  .page-content {
+    background: none; // Quito el fondo para que se vea la imagen
+  }
+}

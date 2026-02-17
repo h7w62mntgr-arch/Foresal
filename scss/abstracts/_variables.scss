@@ -1,0 +1,63 @@
+// ============================================
+// MIS VARIABLES
+// Acá guardo todos los valores que uso en el proyecto
+// Si quiero cambiar un color o tamaño, lo hago acá y se actualiza en todos lados
+// ============================================
+
+// Colores de la marca (los verdes de Foresal)
+$color-primario: #1f4f1f;
+$color-primario-oscuro: #0f2b16;
+$color-primario-medio: #123b1d;
+$color-secundario: #2f6b2f;
+$color-acento: #3f8f3f;
+
+// Colores de fondo
+$fondo-pagina: #f4f6f1;
+$fondo-tarjeta: #fdfdf8;
+
+// Colores de texto
+$texto-principal: #1f2a23;
+$texto-secundario: #4c5c4c;
+
+// Sombras (para darle profundidad a las tarjetas)
+$sombra-suave: 0 6px 12px rgba(0, 0, 0, 0.08);
+$sombra-media: 0 10px 26px rgba(0, 0, 0, 0.12);
+
+// Fuentes
+$font-primary: 'Open Sans', Arial, sans-serif;
+$font-heading: 'Montserrat', sans-serif;
+
+// Breakpoints (para el responsive)
+$breakpoint-mobile: 640px;
+$breakpoint-tablet: 992px;
+
+// Transiciones (para las animaciones suaves)
+$transicion-rapida: 0.15s ease;
+$transicion-media: 0.3s ease;
+
+// Aliases - nombres cortos que uso en algunos lados
+$green-900: $color-primario-oscuro;
+$green-800: $color-primario-medio;
+$green-700: $color-primario;
+$green-600: $color-secundario;
+$green-500: $color-acento;
+$sand: $fondo-pagina;
+$card: $fondo-tarjeta;
+$ink: $texto-principal;
+$muted: $texto-secundario;
+$shadow-soft: $sombra-media;
+
+// Mapas - para generar clases automáticamente con @each
+$colores: (
+  'primario': $color-primario,
+  'secundario': $color-secundario,
+  'acento': $color-acento,
+  'oscuro': $color-primario-oscuro
+);
+
+$espaciados: (
+  'sm': 8px,
+  'md': 16px,
+  'lg': 24px,
+  'xl': 32px
+);

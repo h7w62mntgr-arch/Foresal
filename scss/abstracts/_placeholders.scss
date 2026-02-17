@@ -1,0 +1,50 @@
+// ============================================
+// MIS PLACEHOLDERS
+// Son estilos base que puedo extender con @extend
+// Así no repito código
+// ============================================
+@use 'variables' as *;
+
+// Base para todas las tarjetas
+%card-base {
+  background: $fondo-tarjeta;
+  border-radius: 12px;
+  box-shadow: $sombra-suave;
+  transition: transform $transicion-rapida, box-shadow $transicion-rapida;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $sombra-media;
+  }
+}
+
+// Base para todos los botones
+%btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform $transicion-rapida, box-shadow $transicion-rapida;
+}
+
+// Base para inputs y textareas
+%input-base {
+  width: 100%;
+  border: 1px solid #c8d9c8;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #fff;
+  color: $texto-principal;
+  font-size: 14px;
+  transition: border-color $transicion-rapida, outline $transicion-rapida;
+  
+  &:focus {
+    outline: 2px solid $color-acento;
+    border-color: $color-acento;
+  }
+}

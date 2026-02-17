@@ -1,0 +1,12 @@
+// ============================================
+// SERVICIOS
+// Estilos específicos para la página de servicios
+// ============================================
+
+.page-servicios {
+  .site-header {
+    // Header con imagen de madera + degradado verde encima
+    background: linear-gradient(135deg, rgba(23, 60, 23, 0.9), rgba(72, 148, 72, 0.78)), 
+                url('../assets/Madera.png') center/cover no-repeat;
+  }
+}

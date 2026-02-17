@@ -1,0 +1,66 @@
+// ============================================
+// HERO
+// La sección principal con título grande al inicio de cada página
+// ============================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 18px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeInUp 0.6s ease-out;
+  
+  &__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 13px;
+    opacity: 0.86;
+  }
+  
+  &__title {
+    font-family: $font-heading;
+    font-size: 32px;
+    line-height: 1.25;
+    margin: 0;
+  }
+  
+  &__text {
+    max-width: 760px;
+    color: rgba(245, 255, 245, 0.9);
+    margin: 0;
+  }
+}
+
+.presentacion {
+  color: #fff;
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35)), 
+              url('../assets/Madera.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 320px;
+  padding: 28px 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  
+  p {
+    margin: 3px auto;
+    font-size: 20px;
+    max-width: 620px;
+  }
+  
+  .title {
+    margin: 3px;
+    font-size: 32px;
+    font-family: $font-heading;
+  }
+}

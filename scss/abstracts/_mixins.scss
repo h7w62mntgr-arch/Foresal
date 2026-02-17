@@ -1,0 +1,47 @@
+// ============================================
+// MIS MIXINS
+// Son como "funciones" de CSS que puedo reutilizar
+// Los llamo con @include nombre-del-mixin
+// ============================================
+@use 'variables' as *;
+
+// Sombra suave para tarjetas
+@mixin card-shadow {
+  box-shadow: $sombra-suave;
+}
+
+// Efecto hover: la tarjeta "sube" un poco
+@mixin hover-lift($distancia: -3px) {
+  transition: transform $transicion-rapida, box-shadow $transicion-rapida;
+  
+  &:hover {
+    transform: translateY($distancia);
+    box-shadow: $sombra-media;
+  }
+}
+
+// Centrar con flexbox (lo uso mucho)
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Degradado verde de la marca
+@mixin gradient-green($angle: 135deg) {
+  background: linear-gradient($angle, $color-primario, $color-acento);
+}
+
+// Estilos solo para mobile
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// Estilos solo para tablet
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
