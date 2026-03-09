@@ -96,6 +96,74 @@
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
+// Link del mapa con iframe
+.contact-map-link {
+  position: relative;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform $transicion-media, box-shadow $transicion-media;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    
+    .map-overlay {
+      opacity: 1;
+    }
+  }
+  
+  iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    pointer-events: none;
+  }
+  
+  .map-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba($color-primario, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity $transicion-media;
+    
+    i {
+      font-size: 2rem;
+    }
+    
+    span {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+  }
+}
+
+// Imagen de contacto
+.contact-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform $transicion-media;
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
 .contact-form-block {
   margin-top: 26px;
   padding: 18px 16px;

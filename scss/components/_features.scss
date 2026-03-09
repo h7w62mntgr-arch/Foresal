@@ -8,7 +8,7 @@
 // Contenedor de las feature cards (usa CSS Grid)
 .feature-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   align-items: stretch;
   background: #fff;
@@ -16,6 +16,19 @@
   border-radius: 14px;
   box-shadow: $shadow-soft;
   margin-top: 20px;
+  
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// El media-stack ocupa todo el ancho (4 columnas)
+.media-stack {
+  grid-column: 1 / -1;
 }
 
 .feature-card {

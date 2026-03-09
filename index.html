@@ -3,7 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foresal</title>
+  <meta name="description" content="Foresal - Grupo económico de productores comprometidos con el desarrollo forestal sostenible en Uruguay. Servicios forestales integrales.">
+  <meta name="keywords" content="forestal, uruguay, madera, bosques, sustentabilidad, productores, servicios forestales">
+  <meta name="author" content="Foresal">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://foresal.com/">
+  <meta property="og:title" content="Foresal - Desarrollo Forestal Sostenible">
+  <meta property="og:description" content="Grupo económico de productores comprometidos con el desarrollo forestal sostenible en Uruguay.">
+  <meta property="og:image" content="./assets/iconempresa.png">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Foresal - Desarrollo Forestal Sostenible">
+  <meta name="twitter:description" content="Grupo económico de productores comprometidos con el desarrollo forestal sostenible en Uruguay.">
+  
+  <title>Foresal - Desarrollo Forestal Sostenible en Uruguay</title>
+  <link rel="icon" type="image/png" href="./assets/iconempresa.png">
+  <link rel="canonical" href="https://foresal.com/">
+  
+  <!-- Preconnect para mejorar performance -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./css/styles.css">
@@ -57,17 +81,125 @@
         <p>Diversifica tus inversiones</p>
         <a class="btn-primary" href="./pages/serparte.html">Leer más</a>
       </article>
-      <aside class="media-stack">
-        <div class="media-item">
-          <img src="./assets/arboles.jpg" alt="Bosque con árboles">
+    </section>
+
+    <!-- Sección de estadísticas -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Años de experiencia</span>
         </div>
-        <div class="media-item media-item--placeholder">Pronto: video institucional</div>
-      </aside>
+        <div class="stat-item">
+          <span class="stat-number">5000+</span>
+          <span class="stat-label">Hectáreas gestionadas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Productores asociados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Compromiso sustentable</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Por qué elegirnos -->
+    <section class="why-us-section">
+      <h2 class="section-title">¿Por qué elegirnos?</h2>
+      <div class="why-us-grid">
+        <article class="why-us-card">
+          <div class="why-us-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+          <h3>Confianza</h3>
+          <p>Más de dos décadas trabajando junto a productores uruguayos con transparencia y compromiso.</p>
+        </article>
+        <article class="why-us-card">
+          <div class="why-us-icon"><i class="bi bi-recycle" aria-hidden="true"></i></div>
+          <h3>Sustentabilidad</h3>
+          <p>Prácticas de manejo forestal que respetan el medio ambiente y las generaciones futuras.</p>
+        </article>
+        <article class="why-us-card">
+          <div class="why-us-icon"><i class="bi bi-gear-wide-connected" aria-hidden="true"></i></div>
+          <h3>Tecnología</h3>
+          <p>Maquinaria de última generación y procesos optimizados para máxima eficiencia.</p>
+        </article>
+        <article class="why-us-card">
+          <div class="why-us-icon"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i></div>
+          <h3>Calidad</h3>
+          <p>Certificaciones internacionales que avalan nuestros estándares de excelencia.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>¿Listo para ser parte de Foresal?</h2>
+        <p>Únete a nuestra red de productores y lleva tu producción forestal al siguiente nivel.</p>
+        <div class="cta-buttons">
+          <a href="./pages/serparte.html" class="btn-primary">Ser Parte</a>
+          <a href="./pages/contacto.html" class="btn-secondary">Contáctanos</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Escriu 1276 · Colonia · Fray Bentos - Uruguay · Tel: +59 23382373 · contacto@foresal.com · © 2026 FORESAL</p>
+    <div class="site-footer__main">
+      <div class="site-footer__brand">
+        <a href="./index.html" class="footer-logo">
+          <img src="./assets/iconempresa.png" alt="Foresal">
+          <span>Foresal</span>
+        </a>
+        <p>Grupo económico de productores comprometidos con el desarrollo forestal sostenible en Uruguay.</p>
+        <div class="site-footer__social">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="site-footer__column">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="./index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
+          <li><a href="./pages/servicios.html"><i class="bi bi-chevron-right"></i>Servicios</a></li>
+          <li><a href="./pages/serparte.html"><i class="bi bi-chevron-right"></i>Ser Parte</a></li>
+          <li><a href="./pages/sobrenosotros.html"><i class="bi bi-chevron-right"></i>Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__column">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="./pages/contacto.html"><i class="bi bi-chevron-right"></i>Contacto</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__column site-footer__contact">
+        <h4>Contacto</h4>
+        <div class="contact-item">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span>Escriu 1276, Colonia<br>Fray Bentos, Uruguay</span>
+        </div>
+        <div class="contact-item">
+          <i class="bi bi-telephone-fill"></i>
+          <a href="tel:+59823382373">+598 23 382 373</a>
+        </div>
+        <div class="contact-item">
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:contacto@foresal.com">contacto@foresal.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="footer-bottom-content">
+        <p>© 2026 FORESAL. Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos de Uso</a>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>

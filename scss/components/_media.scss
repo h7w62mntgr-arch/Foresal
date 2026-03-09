@@ -1,15 +1,20 @@
+@use '../abstracts/variables' as *;
 
 .media-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .media-item {
   background: rgba(0, 0, 0, 0.35);
   border-radius: 10px;
   overflow: hidden;
-  height: 200px;
+  height: 220px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
   
   img {
@@ -23,5 +28,16 @@
     place-items: center;
     color: #eef3ec;
     font-weight: 700;
+  }
+  
+  &--video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
   }
 }

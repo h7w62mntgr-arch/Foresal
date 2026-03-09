@@ -88,4 +88,56 @@
     grid-template-columns: 1fr;
     padding: 14px;
   }
+  
+  // Nuevas secciones del home
+  .stats-section {
+    padding: 30px 16px;
+    margin: 24px auto;
+  }
+  
+  .stat-item {
+    padding: 24px 16px;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .why-us-section {
+    padding: 30px 16px;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+  
+  .why-us-card {
+    padding: 24px 20px;
+  }
+  
+  .cta-section {
+    margin: 30px 16px;
+    padding: 36px 20px;
+    border-radius: 16px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
 }
