@@ -1,0 +1,581 @@
+/* ============================================================
+   COTIZADOR DE SERVICIOS - FORESAL
+   Colores clave del proyecto:
+     Primario:    #1f4f1f
+     Secundario:  #2f6b2f
+     Acento:      #3f8f3f
+     Fondo:       #f4f6f1
+     Tarjeta:     #fdfdf8
+     Texto:       #1f2a23
+     Texto2:      #4c5c4c
+   ============================================================ */
+
+/* ──────────────────────────────────────────────────────────
+   SECCIÓN CONTENEDOR PRINCIPAL
+   ────────────────────────────────────────────────────────── */
+.cotizador-section {
+  padding: 3rem 1.5rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cotizador-section .section-title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.cotizador-section .section-subtitle {
+  text-align: center;
+  color: #4c5c4c;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+/* ──────────────────────────────────────────────────────────
+   INDICADORES DE PASO
+   ────────────────────────────────────────────────────────── */
+.cot-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  gap: 0;
+}
+
+.cot-step__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cot-step__num {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #dde8d5;
+  color: #5a7a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cot-step__label {
+  font-size: 0.78rem;
+  color: #7a8a7a;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.cot-step__item.activo .cot-step__num {
+  background: #1f4f1f;
+  color: #fff;
+}
+
+.cot-step__item.activo .cot-step__label {
+  color: #1f4f1f;
+  font-weight: 600;
+}
+
+.cot-step__item.completado .cot-step__num {
+  background: #3f8f3f;
+  color: #fff;
+}
+
+.cot-step__connector {
+  flex: 1;
+  height: 2px;
+  background: #dde8d5;
+  min-width: 3rem;
+  max-width: 8rem;
+  margin-bottom: 1.4rem;
+  transition: background 0.3s;
+}
+
+/* ──────────────────────────────────────────────────────────
+   CONTROLES DE FILTRO Y BÚSQUEDA
+   ────────────────────────────────────────────────────────── */
+.cot-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.cot-filtros input,
+.cot-filtros select {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid #ccdabc;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: #fdfdf8;
+  color: #1f2a23;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cot-filtros input:focus,
+.cot-filtros select:focus {
+  outline: none;
+  border-color: #1f4f1f;
+  box-shadow: 0 0 0 3px rgba(31, 79, 31, 0.12);
+}
+
+.cot-filtros input {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* ──────────────────────────────────────────────────────────
+   LAYOUT PASO 1: CATÁLOGO + PANEL
+   ────────────────────────────────────────────────────────── */
+.cot-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ──────────────────────────────────────────────────────────
+   CATÁLOGO DE SERVICIOS (GRID)
+   ────────────────────────────────────────────────────────── */
+.cot-catalogo h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4c5c4c;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cot-catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.cot-card {
+  background: #fdfdf8;
+  border: 1px solid #d4e6c3;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.cot-card:hover {
+  box-shadow: 0 6px 20px rgba(31, 79, 31, 0.12);
+  transform: translateY(-2px);
+}
+
+.cot-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cot-card__header > i {
+  font-size: 2rem;
+  color: #1f4f1f;
+}
+
+.cot-card__categoria {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.65rem;
+  background: #e0f0d0;
+  color: #1f4f1f;
+  border-radius: 999px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.cot-card__body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f2a23;
+  margin: 0 0 0.3rem;
+}
+
+.cot-card__body p {
+  font-size: 0.82rem;
+  color: #4c5c4c;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cot-card__precio {
+  font-weight: 700 !important;
+  color: #1f4f1f !important;
+  font-size: 0.9rem !important;
+  margin-top: 0.35rem !important;
+}
+
+.cot-card__duracion {
+  font-size: 0.78rem !important;
+  color: #7a8a7a !important;
+}
+
+.cot-btn-agregar {
+  width: 100%;
+  padding: 0.55rem;
+  border: 2px solid #1f4f1f;
+  background: transparent;
+  color: #1f4f1f;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-size: 0.84rem;
+  font-family: inherit;
+  margin-top: auto;
+}
+
+.cot-btn-agregar:hover {
+  background: #1f4f1f;
+  color: #fff;
+}
+
+.cot-btn-agregar.agregado {
+  background: #1f4f1f;
+  color: #fff;
+  border-color: #1f4f1f;
+  cursor: default;
+}
+
+.cot-sin-resultados {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2.5rem;
+  color: #7a8a7a;
+  font-size: 0.95rem;
+}
+
+/* ──────────────────────────────────────────────────────────
+   PANEL LATERAL DE RESUMEN
+   ────────────────────────────────────────────────────────── */
+.cot-panel {
+  background: #f0f7e8;
+  border: 1px solid #ccdabc;
+  border-radius: 12px;
+  padding: 1.4rem;
+  position: sticky;
+  top: 80px;
+}
+
+.cot-panel h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f4f1f;
+  margin-bottom: 1rem;
+}
+
+.cot-resumen-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  color: #9aaa9a;
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.cot-resumen-vacio i {
+  font-size: 2.5rem;
+}
+
+.cot-resumen-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.cot-resumen-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #d4e6c3;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cot-resumen-item__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cot-resumen-item__nombre {
+  display: block;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: #1f2a23;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cot-resumen-item__uni {
+  display: block;
+  font-size: 0.72rem;
+  color: #7a8a7a;
+}
+
+.cot-resumen-item__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cot-cantidad {
+  width: 3.8rem;
+  padding: 0.2rem 0.35rem;
+  border: 1px solid #ccdabc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-family: inherit;
+  background: #fdfdf8;
+}
+
+.cot-cantidad:focus {
+  outline: none;
+  border-color: #1f4f1f;
+}
+
+.cot-resumen-item__precio {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1f4f1f;
+  white-space: nowrap;
+}
+
+.cot-btn-eliminar {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  padding: 0.2rem;
+  border-radius: 4px;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.cot-btn-eliminar:hover {
+  background: #fde8e5;
+}
+
+.cot-resumen-totales {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 2px solid #ccdabc;
+}
+
+.cot-resumen-linea {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.84rem;
+  padding: 0.2rem 0;
+  color: #4c5c4c;
+}
+
+.cot-resumen-total {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f4f1f;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #ccdabc;
+  margin-top: 0.25rem;
+}
+
+/* ──────────────────────────────────────────────────────────
+   FORMULARIO DE DATOS DEL PROYECTO (PASO 2)
+   ────────────────────────────────────────────────────────── */
+.cot-form-wrapper {
+  max-width: 720px;
+}
+
+.cot-form-wrapper h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2a23;
+  margin-bottom: 1.5rem;
+}
+
+.cot-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cot-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.cot-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f2a23;
+}
+
+.cot-form label span .req {
+  color: #c0392b;
+  margin-left: 2px;
+}
+
+.cot-form input,
+.cot-form textarea {
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #ccdabc;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  background: #fdfdf8;
+  color: #1f2a23;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cot-form input:focus,
+.cot-form textarea:focus {
+  outline: none;
+  border-color: #1f4f1f;
+  box-shadow: 0 0 0 3px rgba(31, 79, 31, 0.12);
+}
+
+.cot-input-error {
+  border-color: #c0392b !important;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12) !important;
+}
+
+/* ──────────────────────────────────────────────────────────
+   SECCIÓN DE CONFIRMACIÓN (PASO 3)
+   ────────────────────────────────────────────────────────── */
+.cot-confirmacion-bloque {
+  margin-bottom: 2rem;
+}
+
+.cot-confirmacion-bloque h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f4f1f;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #d4e6c3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cot-confirmacion-dl {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.cot-confirmacion-dl dt {
+  font-weight: 600;
+  color: #4c5c4c;
+}
+
+.cot-confirmacion-dl dd {
+  margin: 0;
+  color: #1f2a23;
+}
+
+.cot-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.cot-tabla th,
+.cot-tabla td {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0ecda;
+}
+
+.cot-tabla thead th {
+  background: #e0f0d0;
+  font-weight: 700;
+  color: #1f4f1f;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cot-tabla tfoot td {
+  color: #4c5c4c;
+  font-weight: 500;
+}
+
+.cot-tabla__total td {
+  color: #1f4f1f;
+  border-top: 2px solid #ccdabc;
+  font-size: 0.95rem;
+}
+
+/* ──────────────────────────────────────────────────────────
+   BOTONES DE NAVEGACIÓN
+   ────────────────────────────────────────────────────────── */
+.cot-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cot-nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ──────────────────────────────────────────────────────────
+   RESPONSIVE
+   ────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .cot-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cot-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .cot-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cot-catalogo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cot-filtros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cot-filtros input,
+  .cot-filtros select {
+    width: 100%;
+  }
+
+  .cot-confirmacion-dl {
+    grid-template-columns: 1fr;
+  }
+}

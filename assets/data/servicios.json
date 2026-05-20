@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "nombre": "Manejo Forestal",
+    "descripcion": "Planificación integral y ejecución de proyectos de manejo forestal sostenible, incluyendo inventarios y planes de corta.",
+    "categoria": "campo",
+    "unidad": "hectárea",
+    "precio": 120,
+    "icono": "bi-tree-fill",
+    "duracion": "1 mes por cada 50 ha"
+  },
+  {
+    "id": 2,
+    "nombre": "Preparación de Sitios",
+    "descripcion": "Preparación del terreno para plantaciones: limpieza de malezas, laboreo del suelo y fertilización inicial.",
+    "categoria": "campo",
+    "unidad": "hectárea",
+    "precio": 90,
+    "icono": "bi-hammer",
+    "duracion": "2 semanas por cada 30 ha"
+  },
+  {
+    "id": 3,
+    "nombre": "Operación de Maquinaria",
+    "descripcion": "Alquiler y operación de maquinaria forestal especializada: cosechadoras, forwarders y motosierras con operarios.",
+    "categoria": "campo",
+    "unidad": "día",
+    "precio": 850,
+    "icono": "bi-truck",
+    "duracion": "Según requerimiento"
+  },
+  {
+    "id": 4,
+    "nombre": "Cosecha Forestal",
+    "descripcion": "Tala, extracción y apilamiento de madera con equipos de última generación. Incluye traslado al área de acopio.",
+    "categoria": "campo",
+    "unidad": "hectárea",
+    "precio": 200,
+    "icono": "bi-scissors",
+    "duracion": "3 semanas por cada 20 ha"
+  },
+  {
+    "id": 5,
+    "nombre": "Replantación",
+    "descripcion": "Plantación de nuevas especies forestales con material vegetal certificado y de alta calidad genética.",
+    "categoria": "campo",
+    "unidad": "hectárea",
+    "precio": 75,
+    "icono": "bi-flower1",
+    "duracion": "1 semana por cada 20 ha"
+  },
+  {
+    "id": 6,
+    "nombre": "Consultoría Ambiental",
+    "descripcion": "Asesoría en impacto ambiental, elaboración de planes de manejo sostenible y gestión de certificaciones FSC/PEFC.",
+    "categoria": "consultoria",
+    "unidad": "proyecto",
+    "precio": 3500,
+    "icono": "bi-leaf",
+    "duracion": "2 a 4 semanas"
+  },
+  {
+    "id": 7,
+    "nombre": "Auditoría Forestal",
+    "descripcion": "Evaluación técnica y certificación de estándares de manejo forestal sostenible ante organismos nacionales e internacionales.",
+    "categoria": "consultoria",
+    "unidad": "proyecto",
+    "precio": 2800,
+    "icono": "bi-clipboard-check",
+    "duracion": "1 a 2 semanas"
+  },
+  {
+    "id": 8,
+    "nombre": "Capacitación en Seguridad",
+    "descripcion": "Formación del personal en normas de seguridad e higiene para operaciones forestales. Incluye certificación.",
+    "categoria": "capacitacion",
+    "unidad": "persona",
+    "precio": 180,
+    "icono": "bi-shield-check",
+    "duracion": "3 días por grupo"
+  }
+]

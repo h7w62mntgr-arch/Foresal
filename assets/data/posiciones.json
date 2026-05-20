@@ -1,0 +1,9 @@
+[
+  { "id": 1, "titulo": "Operador de Maquinaria Forestal" },
+  { "id": 2, "titulo": "Técnico en Gestión Forestal" },
+  { "id": 3, "titulo": "Consultor Ambiental" },
+  { "id": 4, "titulo": "Asistente de Campo" },
+  { "id": 5, "titulo": "Asistente Administrativo" },
+  { "id": 6, "titulo": "Responsable de Logística" },
+  { "id": 7, "titulo": "Otro / Postulación Espontánea" }
+]

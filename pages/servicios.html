@@ -3,28 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Servicios forestales integrales: trabajo de campo, consultoría ambiental, manejo de maquinaria y planes de sustentabilidad en Uruguay.">
-	<meta name="keywords" content="servicios forestales, consultoría ambiental, manejo forestal, maquinaria forestal, Uruguay">
-	<meta name="author" content="Foresal">
-	<meta name="robots" content="index, follow">
-	
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://foresal.com/pages/servicios.html">
-	<meta property="og:title" content="Servicios | Foresal">
-	<meta property="og:description" content="Soluciones forestales integrales para el desarrollo sustentable y la gestión responsable de recursos.">
-	<meta property="og:image" content="../assets/iconempresa.png">
 	
 	<title>Servicios | Foresal - Gestión Forestal Sostenible</title>
 	<link rel="icon" type="image/png" href="../assets/iconempresa.png">
 	<link rel="canonical" href="https://foresal.com/pages/servicios.html">
 	
-	<!-- Preconnect para mejorar performance -->
+	
 	<link rel="preconnect" href="https://cdn.jsdelivr.net">
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/cotizador.css">
 </head>
 <body class="page-servicios">
   <header class="site-header">
@@ -85,6 +75,144 @@
     </div>
   </main>
 
+  <!-- ═══════════════════════════════════════════════════════
+       COTIZADOR DE SERVICIOS FORESTALES
+       Simulador interactivo del proceso de cotización
+  ══════════════════════════════════════════════════════════ -->
+  <section id="cotizador" class="cotizador-section">
+    <h2 class="section-title">Cotizador de Servicios</h2>
+    <p class="section-subtitle">Armá tu presupuesto personalizado en tres pasos.</p>
+
+    <!-- Indicadores de paso -->
+    <div class="cot-steps" role="list" aria-label="Pasos del cotizador">
+      <div class="cot-step__item activo" role="listitem">
+        <span class="cot-step__num">1</span>
+        <span class="cot-step__label">Servicios</span>
+      </div>
+      <div class="cot-step__connector"></div>
+      <div class="cot-step__item" role="listitem">
+        <span class="cot-step__num">2</span>
+        <span class="cot-step__label">Datos del proyecto</span>
+      </div>
+      <div class="cot-step__connector"></div>
+      <div class="cot-step__item" role="listitem">
+        <span class="cot-step__num">3</span>
+        <span class="cot-step__label">Confirmación</span>
+      </div>
+    </div>
+
+    <!-- ── PASO 1: Catálogo de servicios ── -->
+    <div id="cot-paso-1" class="cot-paso">
+      <div class="cot-filtros">
+        <input
+          type="search"
+          id="cot-busqueda"
+          placeholder="Buscar servicio..."
+          aria-label="Buscar servicio"
+        >
+        <select id="cot-filtro-categoria" aria-label="Filtrar por categoría">
+          <option value="todos">Todas las categorías</option>
+          <option value="campo">Campo</option>
+          <option value="consultoria">Consultoría</option>
+          <option value="capacitacion">Capacitación</option>
+        </select>
+        <select id="cot-orden" aria-label="Ordenar por">
+          <option value="nombre">Ordenar: A → Z</option>
+          <option value="precio-asc">Precio: menor → mayor</option>
+          <option value="precio-desc">Precio: mayor → menor</option>
+        </select>
+      </div>
+
+      <div class="cot-layout">
+        <div class="cot-catalogo">
+          <h3>Catálogo de servicios</h3>
+          <div id="catalogo-servicios" class="cot-catalogo-grid">
+            <p class="cot-sin-resultados">Cargando servicios...</p>
+          </div>
+        </div>
+
+        <aside class="cot-panel" aria-label="Resumen del presupuesto">
+          <h3>Tu presupuesto</h3>
+          <div id="panel-resumen">
+            <div class="cot-resumen-vacio">
+              <i class="bi bi-clipboard" aria-hidden="true"></i>
+              <p>Aún no hay servicios en tu presupuesto.</p>
+            </div>
+          </div>
+          <button id="btn-siguiente" class="btn-primary w-100 mt-3" disabled>
+            Continuar <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </button>
+        </aside>
+      </div>
+    </div>
+
+    <!-- ── PASO 2: Datos del proyecto ── -->
+    <div id="cot-paso-2" class="cot-paso" hidden>
+      <div class="cot-form-wrapper">
+        <h3>Datos del proyecto</h3>
+        <form id="form-proyecto" class="cot-form" novalidate>
+          <div class="cot-form-row">
+            <label>
+              <span>Nombre <span class="req">*</span></span>
+              <input type="text" name="nombre" placeholder="Ej: Juan" required>
+            </label>
+            <label>
+              <span>Apellido <span class="req">*</span></span>
+              <input type="text" name="apellido" placeholder="Ej: Pérez" required>
+            </label>
+          </div>
+          <label>
+            <span>Empresa / Establecimiento</span>
+            <input type="text" name="empresa" placeholder="Nombre de la empresa o campo">
+          </label>
+          <div class="cot-form-row">
+            <label>
+              <span>Email <span class="req">*</span></span>
+              <input type="email" name="email" placeholder="tu@email.com" required>
+            </label>
+            <label>
+              <span>Teléfono <span class="req">*</span></span>
+              <input type="tel" name="telefono" placeholder="+598 99 000 000" required>
+            </label>
+          </div>
+          <label>
+            <span>Ubicación del proyecto <span class="req">*</span></span>
+            <input type="text" name="ubicacion" placeholder="Ej: Departamento de Río Negro, Uruguay" required>
+          </label>
+          <label>
+            <span>Fecha estimada de inicio <span class="req">*</span></span>
+            <input type="date" name="fecha" required>
+          </label>
+          <label>
+            <span>Notas adicionales</span>
+            <textarea name="notas" rows="3" placeholder="Información adicional sobre el proyecto..."></textarea>
+          </label>
+        </form>
+      </div>
+      <div class="cot-nav">
+        <button id="btn-ant-paso2" class="btn-secondary">
+          <i class="bi bi-arrow-left" aria-hidden="true"></i> Volver
+        </button>
+        <button id="btn-sig-paso2" class="btn-primary">
+          Continuar <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── PASO 3: Revisión y envío ── -->
+    <div id="cot-paso-3" class="cot-paso" hidden>
+      <div id="cot-confirmacion"></div>
+      <div class="cot-nav">
+        <button id="btn-ant-paso3" class="btn-secondary">
+          <i class="bi bi-arrow-left" aria-hidden="true"></i> Volver
+        </button>
+        <button id="btn-enviar" class="btn-primary">
+          Enviar solicitud <i class="bi bi-send" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="site-footer__main">
       <div class="site-footer__brand">
@@ -143,6 +271,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="../js/cotizador.js" defer></script>
 </body>
 </html>
 

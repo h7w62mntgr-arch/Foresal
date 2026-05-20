@@ -15,6 +15,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "start": "npx serve .",
     "sass": "sass scss/main.scss css/styles.css",
     "sass:watch": "sass --watch scss/main.scss css/styles.css",
     "build": "sass scss/main.scss css/styles.css --style=compressed",
