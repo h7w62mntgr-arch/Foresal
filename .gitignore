@@ -1,3 +1,12 @@
 .DS_Store
 Thumbs.db
 node_modules/
+dist/
+foresal-shop/.env
+foresal-shop/dist/
+.agents/
+.firebaserc
+firebase.json
+dataconnect/
+skills-lock.json
+src/dataconnect-generated/

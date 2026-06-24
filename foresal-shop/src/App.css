@@ -1,0 +1,16 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f3;
+  color: #333;
+  min-height: 100vh;
+}
+
+.app__main {
+  min-height: calc(100vh - 64px);
+}

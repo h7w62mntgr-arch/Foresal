@@ -1,0 +1,23 @@
+.item-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.item-list-container__header {
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #c8e6c9;
+  padding-bottom: 1rem;
+}
+
+.item-list-container__title {
+  font-size: 1.8rem;
+  color: #1e3d1a;
+  margin: 0 0 0.25rem 0;
+}
+
+.item-list-container__subtitle {
+  font-size: 0.95rem;
+  color: #777;
+  margin: 0;
+}
