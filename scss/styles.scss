@@ -171,7 +171,7 @@ $espaciados: (
   background: linear-gradient($angle, $color-primario, $color-acento);
 }
 
-// Mixin responsive
+
 @mixin mobile {
   @media (max-width: $breakpoint-mobile) {
     @content;
@@ -184,9 +184,6 @@ $espaciados: (
   }
 }
 
-// ============================================
-// ANIMACIONES
-// ============================================
 
 @keyframes fadeInUp {
   from {

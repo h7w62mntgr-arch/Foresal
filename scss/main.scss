@@ -1,11 +1,7 @@
 
-// ============================================
-// FORESAL - Hoja de estilos principal
-// Organizado con el patrón 7-1
-// ============================================
 
-// 1. ABSTRACTS - Acá van las variables, mixins y placeholders
-// (No generan CSS, solo los uso en otros archivos)
+
+
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
 @use 'abstracts/placeholders';
@@ -13,13 +9,12 @@
 // 2. VENDORS - CSS de librerías externas (Bootstrap, etc.)
 @use 'vendors/index' as vendors;
 
-// 3. BASE - Lo básico: reset, fuentes, animaciones y clases útiles
 @use 'base/reset';
 @use 'base/typography';
 @use 'base/animations';
 @use 'base/utilities';
 
-// 4. LAYOUT - La estructura del sitio: header, nav, footer, etc.
+
 @use 'layout/header';
 @use 'layout/navigation';
 @use 'layout/hero';
