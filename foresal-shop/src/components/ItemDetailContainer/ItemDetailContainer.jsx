@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { mockProducts } from '../../firebase/mockData';
+import { getProductById } from '../../firebase/services';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Loader from '../Loader/Loader';
 import './ItemDetailContainer.css';
@@ -12,11 +12,9 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => {
-      const found = mockProducts.find((p) => p.id === id) ?? null;
-      setProduct(found);
-      setLoading(false);
-    }, 400);
+    getProductById(id)
+      .then((found) => setProduct(found))
+      .finally(() => setLoading(false));
   }, [id]);
 
   if (loading) return <div className="item-detail-container"><Loader /></div>;

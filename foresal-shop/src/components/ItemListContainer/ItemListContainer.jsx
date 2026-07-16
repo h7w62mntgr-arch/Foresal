@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { mockProducts } from '../../firebase/mockData';
+import { getProducts } from '../../firebase/services';
 import ItemList from '../ItemList/ItemList';
 import Loader from '../Loader/Loader';
 import './ItemListContainer.css';
@@ -19,13 +19,9 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => {
-      const data = categoryId
-        ? mockProducts.filter((p) => p.category === categoryId)
-        : mockProducts;
-      setProducts(data);
-      setLoading(false);
-    }, 500);
+    getProducts(categoryId)
+      .then((data) => setProducts(data))
+      .finally(() => setLoading(false));
   }, [categoryId]);
 
   const heading = categoryId

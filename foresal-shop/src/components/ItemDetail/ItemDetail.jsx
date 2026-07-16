@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 const ItemDetail = ({ id, title, description, price, stock, image, unit, category }) => {
-  const { addItem, isInCart } = useCart();
+  const { addItem } = useCart();
   const [added, setAdded] = useState(false);
 
   const handleAdd = (quantity) => {
